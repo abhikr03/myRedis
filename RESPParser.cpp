@@ -1,5 +1,8 @@
 #include "RESPParser.h"
+#include <winsock2.h>
+#include <ws2tcpip.h>
 
+#pragma comment(lib, "Ws2_32.lib")
 
 std::string RESPParser::read_from_fd(int n_bytes) {
     char buf[n_bytes];
